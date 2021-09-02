@@ -3,6 +3,9 @@
 
 @section('content')
 <div class="text-center mb-4">
+    @if (session()->has('success')) 
+         <p>{{session('success')}}</p> 
+    @endif
     <a href="."><img src="./static/logo.svg" height="36" alt=""></a>
   </div>
   <form class="card card-md" action="." method="get" autocomplete="off">
@@ -55,7 +58,7 @@
     </div>
   </form>
   <div class="text-center text-muted mt-3">
-    Don't have account yet? <a href="/" tabindex="-1">Sign up</a>
+    Don't have account yet? <a href="/register" tabindex="-1">Sign up</a>
   </div>
 </div>
 </div>

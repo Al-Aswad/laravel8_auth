@@ -19,7 +19,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome'); 
 // });
 
-Route::get('/', [RegisterController::class, 'index']);
-Route::post('/', [RegisterController::class, 'store']);
+Route::get('/', [LoginController::class, 'index']);
+
+
+
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/login', [LoginController::class, 'index']);
