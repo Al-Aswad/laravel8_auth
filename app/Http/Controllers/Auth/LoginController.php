@@ -18,7 +18,13 @@ class LoginController extends Controller
 
     public function authenticate(Request $request)
     {
-        if (Auth::attempt(['nik_karyawan' => $request->nik_karyawan, 'password' => $request->password])) {
+        $validated = $request->validate([
+            'nik_karyawan' => 'required',
+            'password' => 'required',
+        ]);
+        $remember = $request->remember;
+
+        if (Auth::attempt(['nik_karyawan' => $request->nik_karyawan, 'password' => $request->password], $remember)) {
             // Authentication was successful...
             if (Auth::user() && Auth::user()->roles == "ADMIN") {
                 return redirect('/dashboard');
