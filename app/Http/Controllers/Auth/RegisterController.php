@@ -12,7 +12,9 @@ class RegisterController extends Controller
     //
     public function index()
     {
-        return view('pages.auth.register');
+        return view('pages.auth.register', [
+            'title' => 'Register'
+        ]);
     }
 
     public function store(Request $request)

@@ -13,7 +13,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>{{$title}}</title>
+    <title>Dashboard - Admin</title>
     <!-- CSS files -->
     <link href="{{url('backend/template/')}}/dist/css/tabler.min.css" rel="stylesheet"/>
     <link href="{{url('backend/template/')}}/dist/css/tabler-flags.min.css" rel="stylesheet"/>
@@ -21,6 +21,5 @@
     <link href="{{url('backend/template/')}}/dist/css/tabler-vendors.min.css" rel="stylesheet"/>
     <link href="{{url('backend/template/')}}/dist/css/demo.min.css" rel="stylesheet"/>
   </head>
-  <body class="antialiased border-top-wide border-primary d-flex flex-column">
-    <div class="page page-center">
-      <div class="container-tight py-4">
+  <body class="antialiased">
+    <div class="wrapper">
